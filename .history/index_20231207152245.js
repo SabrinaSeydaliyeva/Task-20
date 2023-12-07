@@ -5,33 +5,32 @@ let amountInput = document.querySelector(".amount-input");
 let btn=document.querySelector("button")
 let ul=document.querySelector("ul")
 
-btn.addEventListener("click", postData)
-getData()
+btn.addEventListener("click", createObject)
 
+function createObject(){
+    // ul.innerHTML+=``
 
-// fetch data
-function getData(){
-    // ul.innerHTML+=``   
+  
+     
     fetch("https://acb-api.algoritmika.org/api/transaction")
     .then((response) => {
       return response.json();
     })
     
     .then((data) => {
+      console.log(data);
       showAllData(data)
 
     });
 }
+createObject()
 
-
-
-// post data
-function postData(e) {
-  e.preventDefault()
+function postData(element) {
+    
     let info={
-        from:fromInput.value,
-        to:toInput.value,
-        amount: amountInput.value
+        from:"",
+        to:"",
+        amount:""
     }
      
     fetch("https://acb-api.algoritmika.org/api/transaction",{
@@ -39,10 +38,17 @@ function postData(e) {
         headers: {'Content-type': 'application/json' },
         body: JSON.stringify(info)
     })
+    .then((response) => {
+      return response.json();
+    })
+    
+    .then((data) => {
+      console.log(data);
+      showAllData(data)
 
-
+    });
 }
-// show data
+
 function showAllData(data) {
     data.forEach((element) => {
       ul.innerHTML += `

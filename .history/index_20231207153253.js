@@ -40,7 +40,6 @@ function postData(e) {
         body: JSON.stringify(info)
     })
 
-
 }
 // show data
 function showAllData(data) {

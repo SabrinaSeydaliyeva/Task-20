@@ -22,7 +22,7 @@ function getData(){
 
     });
 }
-
+getData()
 
 
 // post data
@@ -39,7 +39,6 @@ function postData(e) {
         headers: {'Content-type': 'application/json' },
         body: JSON.stringify(info)
     })
-
 
 }
 // show data

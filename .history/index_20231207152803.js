@@ -5,10 +5,8 @@ let amountInput = document.querySelector(".amount-input");
 let btn=document.querySelector("button")
 let ul=document.querySelector("ul")
 
-btn.addEventListener("click", postData)
+// btn.addEventListener("click", createObject)
 getData()
-
-
 // fetch data
 function getData(){
     // ul.innerHTML+=``   
@@ -22,12 +20,11 @@ function getData(){
 
     });
 }
-
+createObject()
 
 
 // post data
-function postData(e) {
-  e.preventDefault()
+function postData() {
     let info={
         from:fromInput.value,
         to:toInput.value,
@@ -39,7 +36,6 @@ function postData(e) {
         headers: {'Content-type': 'application/json' },
         body: JSON.stringify(info)
     })
-
 
 }
 // show data

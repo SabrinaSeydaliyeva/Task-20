@@ -7,8 +7,6 @@ let ul=document.querySelector("ul")
 
 btn.addEventListener("click", postData)
 getData()
-
-
 // fetch data
 function getData(){
     // ul.innerHTML+=``   
@@ -22,12 +20,12 @@ function getData(){
 
     });
 }
-
+getData()
 
 
 // post data
 function postData(e) {
-  e.preventDefault()
+  e.pre
     let info={
         from:fromInput.value,
         to:toInput.value,
@@ -39,7 +37,6 @@ function postData(e) {
         headers: {'Content-type': 'application/json' },
         body: JSON.stringify(info)
     })
-
 
 }
 // show data

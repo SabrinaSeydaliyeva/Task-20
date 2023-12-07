@@ -39,7 +39,7 @@ function postData(e) {
         headers: {'Content-type': 'application/json' },
         body: JSON.stringify(info)
     })
-
+    get
 
 }
 // show data
