@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.container form {
+  width: 50%;
+}
+.container form input {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: var(--W-Background, #fff);
+}
+.container form button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+}/*# sourceMappingURL=index.css.map */

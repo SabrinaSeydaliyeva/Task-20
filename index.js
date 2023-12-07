@@ -1,0 +1,65 @@
+let form = document.querySelector("form");
+let fromInput = document.querySelector(".from-input");
+let toInput = document.querySelector(".to-input");
+let amountInput = document.querySelector(".amount-input");
+let btn=document.querySelector("button")
+let ul=document.querySelector("ul")
+
+btn.addEventListener("click", createObject)
+
+function createObject(){
+    // ul.innerHTML+=``
+
+  
+     
+    fetch("https://acb-api.algoritmika.org/api/transaction")
+    .then((response) => {
+      return response.json();
+    })
+    
+    .then((data) => {
+      console.log(data);
+      showAllData(data)
+
+    });
+}
+createObject()
+
+function postData(element) {
+    
+    let info={
+        from:"",
+        to:"",
+        amount:""
+    }
+     
+    fetch("https://acb-api.algoritmika.org/api/transaction",{
+        method: 'POST',
+        headers: {'Content-type': 'application/json' },
+        body: JSON.stringify(info)
+    })
+    .then((response) => {
+      return response.json();
+    })
+    
+    .then((data) => {
+      console.log(data);
+      showAllData(data)
+
+    });
+}
+
+function showAllData(data) {
+    data.forEach((element) => {
+      ul.innerHTML += `
+      <li>
+      <h1>${element.from}</h1>
+      <h2>${element.to}</h2>
+      <h3>${element.amount}</h3>
+  
+  </li>`;
+    });
+}
+
+
+
