@@ -7,28 +7,19 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.container form {
-  width: 50%;
-}
-.container form input {
-  width: 100%;
-  margin-bottom: 10px;
+  background-color: red;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background: var(--W-Background, #fff);
 }
-.container form button {
-  border: none;
+.container form {
+  width: 40%;
+}
+.container form input {
   padding: 10px;
-  border-radius: 10px;
-  display: block;
-  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */
